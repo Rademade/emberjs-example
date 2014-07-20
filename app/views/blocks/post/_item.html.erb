@@ -1,0 +1,18 @@
+<div>
+  <h4>More info</h4>
+  <span class="desc">{{desc}}</span>
+
+  {{# if isExpanded }}
+    <p>{{full_description}}</p>
+    <button {{action 'hide'}}>Hide</button>
+  {{else}}
+    <button {{action 'more'}}>More</button>
+  {{/if}}
+
+  {{# if isEditing }}
+    {{ partial 'post/form' }}
+    <button {{action 'done'}}>Done</button>
+  {{else}}
+    <button {{action 'edit'}}>Edit</button>
+  {{/if}}
+</div>

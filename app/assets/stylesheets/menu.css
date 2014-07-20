@@ -1,0 +1,10 @@
+a {
+    text-decoration: underline;
+    color: #243bbb;
+}
+
+.active {
+    text-decoration: none;
+    cursor: default;
+    color: #ccc;
+}

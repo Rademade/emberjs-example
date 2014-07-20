@@ -1,0 +1,31 @@
+<h2>List of posts</h2>
+
+{{#link-to 'posts.new'}}Add new{{/link-to}}
+
+<table class="data-table">
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each}}
+      <tr>
+        <td>
+          {{#link-to 'post' this}}
+            {{id}}
+          {{/link-to}}
+        </td>
+        <td>{{name}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+
+</table>
+
+<div class="table-desc">
+    {{outlet}}
+</div>

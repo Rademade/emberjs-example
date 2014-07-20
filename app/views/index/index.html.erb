@@ -1,0 +1,15 @@
+<%
+    [
+        {path: 'blocks/application'},
+        {path: 'blocks/index', id: 'index'},
+        {path: 'blocks/post/list', id: 'posts'},
+        {path: 'blocks/post/new', id: 'posts/new'},
+        {path: 'blocks/post/item', id: 'post'},
+        {path: 'blocks/post/form', id: 'post/_form'},
+        {path: 'blocks/users_table', id: 'users'},
+        {path: 'blocks/about', id: 'about'}
+    ].each do |item|
+        html = render item[:path]
+        concat content_tag(:script, html, {:id => item[:id], :type => 'text/x-handlebars'})
+    end
+%>
